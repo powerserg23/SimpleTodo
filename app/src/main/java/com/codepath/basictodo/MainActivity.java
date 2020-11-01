@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
@@ -20,27 +21,32 @@ import java.util.ArrayList;
 import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
-
-
+    // This is where you will initialize all of the compoenents that will be used in this activity
     List<String> items;
-
     Button btndAdd;
     EditText etItem;
     RecyclerView rvItems;
     ItemsAdapter itemsAdapter;
+    ImageView ivTest;
+
+
+    // onCreate is the first function that is called when the MainActivity(and any activity) starts
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        findViewbyId will link the items we initialized to the components in
+        the layout we designed
+         */
+
+        ivTest = findViewById(R.id.ivTest);
+
         btndAdd=findViewById(R.id.btnAdd);
         etItem=findViewById(R.id.etItem);
         rvItems=findViewById(R.id.rvItems);
-
-
         loadItems();
-
-
         ItemsAdapter.OnLongClicklistener onLongClickListener= new ItemsAdapter.OnLongClicklistener()
         {
             @Override
@@ -57,9 +63,13 @@ public class MainActivity extends AppCompatActivity {
         };
 
         itemsAdapter=new ItemsAdapter(items,onLongClickListener);
+
+        //
+        // we set itemsAdapter to be the adapter for rvItems recyclerview
         rvItems.setAdapter(itemsAdapter);
         rvItems.setLayoutManager(new LinearLayoutManager(this));
 
+        //here we give btnAdd some functionality
         btndAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
