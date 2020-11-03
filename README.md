@@ -4,7 +4,11 @@ Simple To-Do is an android app that allows building a todo list and basic todo i
 
 ## Instructions
 
-1. Go to Android STudio
+1. Open Android Studio
+2. From the Startup Screen select **Get from Version Control**
+3. Copy the URL from the top right green dropdown titled **Code**
+4. Paste into URL Box in Android Studio. Optional: You can change the directory of the code but it is not necessary. 
+5. Click Clone
 
 ## License
 
