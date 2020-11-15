@@ -3,6 +3,7 @@ package com.codepath.basictodo;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,14 +11,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-
+//items adapter extends from RecyclerView.Adapter as all recyclerviews require an adapter
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
     public interface OnLongClicklistener{
         void onItemLongClicked(int position);
     }
+    //initializing the "list" of items
     List<String> items;
     OnLongClicklistener longClicklistener;
+
+
     public ItemsAdapter(List<String> items, OnLongClicklistener longClicklistener) {
         this.items=items;
         this.longClicklistener=longClicklistener;
@@ -39,8 +43,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
     //grab the item at the position
         String item=items.get(position);
-        //bind the item into the specified viewholder
 
+        //bind the item into the specified viewholder
         holder.bind(item);
 
     }
@@ -49,13 +53,10 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
     public int getItemCount() {
         return items.size();
     }
-
     // container to provide easy access to view that represent each row of the list
-
     class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView tvItem;
-
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

@@ -41,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
         the layout we designed
          */
 
-        ivTest = findViewById(R.id.ivTest);
-
         btndAdd=findViewById(R.id.btnAdd);
         etItem=findViewById(R.id.etItem);
         rvItems=findViewById(R.id.rvItems);
@@ -91,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //this function will load items by reading every line of the data file
-    // this function isaves items by writing them into the data file
+
 
     private void loadItems()
     {
@@ -105,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    // this function saves items by writing them into the data file
     private void saveItems()
     {
         try {
