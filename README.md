@@ -11,6 +11,9 @@ https://docs.google.com/presentation/d/1E5hXyvfCZUICzse2Mm8k_w-tq-9Zz1dvkAb3pGww
 4. Paste into URL Box in Android Studio. Optional: You can change the directory of the code but it is not necessary. 
 5. Click Clone
 
+## Other Projects
+
+1. https://github.com/michaellofton/Flixster
 ## License
 
     Copyright [2020] [Sergio Dejo Ames]
