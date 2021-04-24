@@ -14,6 +14,7 @@ https://docs.google.com/presentation/d/1E5hXyvfCZUICzse2Mm8k_w-tq-9Zz1dvkAb3pGww
 ## Other Projects
 
 1. https://github.com/michaellofton/Flixster
+2. https://guides.codepath.com/android/using-the-recyclerview
 ## License
 
     Copyright [2020] [Sergio Dejo Ames]
